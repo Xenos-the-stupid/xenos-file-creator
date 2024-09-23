@@ -7,6 +7,7 @@ const fileName = projectPath.split(path.sep).pop();
 await write(
   path.join(projectPath, `${fileName}.tsx`),
   `
+import styles from "./${fileName}.module.scss";
 export default function ${fileName}() {
   return (
     <div>${fileName}</div>
